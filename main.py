@@ -79,8 +79,9 @@ class MainPage(Handler):
             else:
                 vote = -1
             #cycles through blog posts and checks for an id match to add vote
+            #prevents users from liking their own posts
             for post in posts:
-                if str(post.id) == str(id):
+                if str(post.id) == str(id) and post.user != user:
                     for v in post.voters:
                         if str(v) == user:
                             has_voted = True
