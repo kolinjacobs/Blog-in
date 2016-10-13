@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <title>Blog-in</title>
-</head>
-<body>
-    <div id="menu">
-        {% if user == "" %}
-            <a class="menuLinks" href="/login">Sign In</a>
-        {% else %}
-            <a  class="menuLinks" id="usericon" href="/profile">
-                <img src="http://bucketlist.co.ke/assets/images/icons/user-icon.png" height="30px">
-            </a>
-            <a  class="menuLinks" class="menuLinks" href="/logout">Log Out</a>
-        {% endif %}
-        <a class="menuLinks" href="/post">New Post</a>
-        <a id="logo" href="/"><h1>Blog-<span>in</span></h1></a>
-    </div>
+{% extends "base.html" %}
 
+{% block content %}
     <div class="editfrom">
         <form method="post">
             <h1>Edit Post</h1>
@@ -30,6 +11,4 @@
             <input id="submitedit" type="submit">
         </form>
     </div>
-
-</body>
-</html>
+{% endblock %}

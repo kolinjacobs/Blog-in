@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <title>Blog-in</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-
+{% block content %}
     <div class="signupform">
         <form method="post">
             <h1>Welcome</h1>
@@ -24,5 +16,4 @@
         </form>
     </div>
     <a id="signupback" href="/">← Back to Blog-in</a>
-</body>
-</html>
+{% endblock %}
