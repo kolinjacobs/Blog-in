@@ -9,6 +9,16 @@ How to run:
 
 3. enjoy
 
+How to run locally:
+
+1. download google app engine sdk
+
+2. start the local development server using the dev_appserver.py command in the blog-in directory
+
+3. go to The URL is http://localhost:8000
+
+3. enjoy
+
 Website functionality:
 
   Landing page(/)
