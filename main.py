@@ -57,7 +57,9 @@ class MainPage(Handler):
                             "ORDER BY created DESC ")
         user = self.get_user_cookie()
         blog_users = users.all()
-        self.render("index.html", posts = posts, user = user)
+        self.render("index.html",
+                    posts = posts,
+                    user = user)
 
     def post(self):
         #gets and saves user, blog post, and id of the blog posts
@@ -122,9 +124,13 @@ class Post_Blog(Handler):
                 posts = db.GqlQuery("SELECT * FROM BlogPosts")
                 post_num = posts.count() + 1
                 id = self.generate_Blog_Id()
-                a = BlogPosts(title = title, content = content,number = post_num,user=user,id=id,votes=0)
+                a = BlogPosts(title = title,
+                              content = content,
+                              number = post_num,
+                              user=user,id=id,
+                              votes=0)
                 a.put()
-                self.redirect('/')
+                self.redirect('/posted?q='+id)
             else:
                 title_error = ""
                 content_error = ""
@@ -132,8 +138,11 @@ class Post_Blog(Handler):
                     title_error = "You're missing a title"
                 if content == "":
                     content_error = " You're missing content"
-                self.render("post.html", content_error=content_error,
-                            title_error=title_error, title=title,content=content )
+                self.render("post.html",
+                            content_error=content_error,
+                            title_error=title_error,
+                            title=title,
+                            content=content )
 
 class login(Handler):
     def get(self):
@@ -166,7 +175,9 @@ class login(Handler):
                 pass_error = " please enter a password"
             if user_exist == False:
                 username_error = " Wrong Username or Password"
-            self.render("login.html", username_error=username_error, password_error=pass_error)
+            self.render("login.html",
+                        username_error=username_error,
+                        password_error=pass_error)
 class signup(Handler):
     def get(self):
         self.render("signup.html")
@@ -190,7 +201,9 @@ class signup(Handler):
         if username and email and password and password_two and \
                         username_taken == False and email_taken == False and pass_match == True:
             pass_hash = hash.make_pw_hash(username,password)
-            a = users(username=username, password_hash=pass_hash, email=email)
+            a = users(username=username,
+                      password_hash=pass_hash,
+                      email=email)
             a.put()
             self.login(username)
             self.redirect("/")
@@ -212,7 +225,8 @@ class signup(Handler):
                 password_error = " please fill in both password fields"
             if password == "":
                 password_error = " please enter a password"
-            self.render("signup.html",username_error=username_error,
+            self.render("signup.html",
+                        username_error=username_error,
                         email_error=email_error,
                         password_error=password_error)
 class logout(Handler):
@@ -248,9 +262,13 @@ class posted_blog(Handler):
         for comment in all_comments:
             if comment.post_id == str(id):
                 post_comments.append(comment)
-        self.render("singlepost.html",post = cur_post,comments = post_comments,user = user)
+        self.render("singlepost.html",
+                    post = cur_post,
+                    comments = post_comments,
+                    user = user)
     def post(self):
         user = self.get_user_cookie()
+        post_id = self.request.get("q")
         delete_Button = self.request.POST.get('delete', None)
         submit_Button = self.request.POST.get('comment', None)
         comment_id = self.request.get("id")
@@ -259,13 +277,13 @@ class posted_blog(Handler):
                 # gets comment by id and deletes it
                 all_comments = comments.all()
                 for c in all_comments:
-                    if c.id == comment_id:
+                    #verifiest that the user owns this comment before deleting
+                    if c.id == comment_id and c.username == user:
                         c.delete()
-                self.redirect("/")
+                self.redirect("/posted?q="+str(post_id))
             elif submit_Button:
                 # checks for validation and adds comment
                 id = self.generate_comment_id()
-                post_id = self.request.get("q")
                 content = self.request.get("commentContent")
                 a = comments(username= user,post_id = str(post_id),content=content,id=id)
                 a.put()
@@ -333,12 +351,17 @@ class edit(Handler):
         content=""
         for p in posts:
             if p.id == post_id and user == p.user:
+                #checks to make sure the user is the owner of the blog post being edited
+                #then sets editable to be true other wise redirects to the homepage
                 title = p.title
                 content = p.content
                 editable = True
                 break
         if editable == True:
-            self.render("edit.html", title=title, content=content, user=user)
+            self.render("edit.html",
+                        title=title,
+                        content=content,
+                        user=user)
         else:
             self.redirect("/")
     def post(self):
