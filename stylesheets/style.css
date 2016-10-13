@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body{
+    margin: 0px auto;
+    background-color: #e6e6e6;
+    font-family: oswald;
+}
+#menu{
+    height: 50px;
+    width: 100%;
+    background-color: #ff4646;
+    top:0px;
+}
+#logo{
+     text-decoration: none;      
+    display: block;
+    width: 100px;
+}
+#menu h1{
+    color:white;
+    display: block;
+    height: 50px;
+    margin-top: 0;
+    line-height: 50px;
+    width: 100px;
+    font-weight:300;
+    margin-left: 10px;
+    text-decoration: none;
+}
+#menu h1 span{
+    font-weight: bolder;
+}
+.menuLinks{
+    float: right;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 200;
+}
+#welcome{
+    text-align: center;
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 200;
+}
+#welcome span{
+    font-weight: 500;
+}
+.post{
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.blogTitle{
+    height: 50px;
+    background-color: #767676;
+}
+.post h1{
+    color: #1d1d1d;
+    text-align: center;
+    margin: 0px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 3px;
+
+}
+.content{
+    margin: 0px;
+    height: 260px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    overflow-y:scroll;
+    line-height: 35px;
+    color: #212121;
+}
+#addNewBlog{
+    display: block;
+    text-align: center;
+    border: 2px #e6e6e6 solid;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #ff4646;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#usericon{
+ margin-top:5px;
+}
+.postheader{
+    height: 50px;
+    background-color: #767676;
+}
+.postheader p{
+    display: block;
+    right:0px;
+    float: right;
+    margin-right: 20px;
+
+}
+.post a{
+    text-decoration: none;
+}
+.postheader img{
+    margin-top: 10px;
+    height: 75px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-color: #bcbcbc;
+    margin-left: 25px;
+    border: 3px #767676 solid;
+    position: absolute;
+    float: left;
+}
+.profileLink{
+    float: left;
+    color: white;
+    margin-top: 10px;
+    font-size: 25px;
+    padding-left: 125px;
+    font-weight: 100;
+    text-decoration: none;
+}
+.upVote{
+    width: 50px;
+    height: 150px;
+    position: absolute;
+    margin-left: calc(((100% - 800px) / 2) - 60px);
+    margin-top: 125px;
+    background-color: white;
+}
+.upVote input {
+    width: 100%;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+.upVote p{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.upvote{
+    color: #767676;
+    margin-top: 10px;
+}
+.downvote{
+    color: #767676;
+}
+
+
+
+/***********************************         Profile.html CSS              ***********************/
+
+.profilepost{
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.blogTitle{
+    height: 50px;
+    background-color: #767676;
+}
+.profilepost h1{
+    color: white;
+    text-align: center;
+    height: 50px;
+    background-color: #767676;
+    margin: 0px;
+    font-weight: 400;
+}
+.profilepost p{
+    margin: 0px;
+    height: 310px;
+    padding: 20px;
+    overflow-y:scroll;
+    line-height: 35px;
+    color: #212121;
+}    
+.profilepost a{
+display:block;
+margin-left:auto;
+margin-right:auto;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+#addNewBlog{
+    display: block;
+    text-align: center;
+    border: 2px #e6e6e6 solid;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    background-color: #ff4646;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+#usericon{
+ margin-top:5px;
+}
+#profilePicture{
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+#profilePicture img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: #dedede;
+    border: 3px #767676 solid;
+}
+.profiledelete{
+   position: absolute;
+        float: right;
+    right:calc((100% - 800px) / 2);
+}
+.profiledeleteButton{
+   border:none;
+background: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: rgba(255, 255, 255, 0);
+    border-radius: 20%;
+    margin: 10px;
+    background-image: url(http://downloadicons.net/sites/default/files/trash-can-symbol-icon-504.png);
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.profileeditButton{
+   border:none;
+background: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: rgba(255, 255, 255, 0);
+    border-radius: 20%;
+    margin: 10px 0px;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/graphic-design-tools-outline/512/oYPS__marker_pen_pencil_tablet_draw_write_sign_signature_graphic_tool-512.png);
+    background-size:70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/***********************************         post.html CSS              ***********************/
+.postfrom{
+    width: 800px;
+    height: 570px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.postfrom h1{
+    color: #4a4a4a;
+    text-align: center;
+    height: 50px;
+    margin: 0px;
+    font-size: 45px;
+    line-height: 70px;
+}
+.postfrom h2{
+    color: #1d1d1d;
+    height: 50px;
+    margin: 0px;
+    margin-top: 20px;
+    font-weight: 300;
+    margin-left: 60px;
+    font-size: 30px;
+}
+.postfrom h2 span{
+    color: red;
+    font-size: 20px;
+}
+.postfrom p{
+    margin: 0px;
+    height: 310px;
+    padding: 20px;
+    line-height: 35px;
+    color: #212121;
+}    
+#titleText{
+    width: 680px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 5px 10px 0px 10px;
+    font-size: 25px;
+}      
+.postfrom textarea{
+    width: 680px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 220px;
+    border-radius: 10px;
+    margin-left: 50px;;
+    resize: none;
+    font-size:15px;
+    padding: 10px;
+}   
+#submit{
+    width: 300px;
+    height: 50px;
+    margin-left: 250px;
+    margin-top: 10px;
+    background-color: #ff4646;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+/***********************************         login.html CSS              ***********************/
+.loginform{
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    margin-top: 40vh;
+    transform: translateY(-40%);
+    border-radius: 10px;
+    
+}
+.loginform h1{
+    color: #ffffff;
+    text-align: center;
+    height: 70px;
+    margin: 0px;
+    font-size: 45px;
+    line-height: 70px;
+    background-color: grey;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: 200;
+}
+.loginform h2{
+    color: #1d1d1d;
+    height: 30px;
+    margin: 0px;
+    margin-top: 20px;
+    font-weight: 800;
+    margin-left: 60px;
+    font-size: 20px;
+}
+.loginform h2 span{
+    color: red;
+    font-size: 20px;
+}
+.loginform a{
+    display: block;
+    line-height: 35px;
+    color: #484848;
+    text-align: center;
+    margin-top: 5px;
+
+}    
+.loginbar{
+    width: 480px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 50px;
+    padding: 5px 10px 0px 10px;
+    font-size: 25px;
+} 
+#loginsubmit{
+    width: 300px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ff4646;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+#loginback{
+ text-align: center;
+    display: block;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+    color: black;
+    z-index: 10;
+    
+}
+/***********************************         signup.html CSS              ***********************/
+.signupform{
+    width: 600px;
+    height: 570px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.signupform h1{
+    color: #ffffff;
+    text-align: center;
+    height: 70px;
+    margin: 0px;
+    font-size: 45px;
+    line-height: 70px;
+    background-color: grey;
+    border-radius: 10px 10px 0px 0px
+}
+.signupform h2{
+    color: #1d1d1d;
+    height: 30px;
+    margin: 0px;
+    margin-top: 20px;
+    font-weight: 800;
+    margin-left: 60px;
+    font-size: 20px;
+}
+.signupform h2 span{
+    color: red;
+    font-size: 20px;
+}
+.signupform a{
+    display: block;
+    line-height: 35px;
+    color: #484848;
+    text-align: center;
+    margin-top: 5px;
+
+}    
+.signupbar{
+    width: 480px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 50px;
+    padding: 5px 10px 0px 10px;
+    font-size: 25px;
+} 
+#signupsubmit{
+    width: 300px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 20px;
+    background-color: #ff4646;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+#signupback{
+ text-align: center;
+    display: block;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+/***********************************         singlepost.html CSS              ***********************/
+.singlepost{
+    width: 800px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.blogTitle{
+    height: 50px;
+    background-color: #767676;
+}
+.singlepost h1{
+    color: white;
+    text-align: center;
+    height: 50px;
+    background-color: #767676;
+    margin: 0px;
+    font-weight: 400;
+}
+.singlepost h3{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 12px;
+    color: black;
+}
+.singlepost p{
+    margin: 0px;
+    padding: 20px;
+
+    line-height: 35px;
+    color: #212121;
+}    
+.singlepost a{
+display:block;
+margin-left:auto;
+margin-right:auto;
+    text-decoration: none;
+    color: #1d1d1d;
+}    
+#addcomment{
+    width:800px;
+    height: 350px;
+    background-color: white;
+    margin: auto;
+}        
+#addcomment h1{
+    text-align: center;
+    font-weight: 100;
+}        
+#addcomment textarea{
+    width: 90%;
+    height: 200px;
+    margin-left:5%;
+    resize: none;
+}        
+#addcomment input{
+    margin: auto;
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: #ff4646;
+    border: none;
+    color:white;
+}
+#comments{
+    width: 800px;
+    min-height: 300px;
+    background-color: white;
+    margin: auto;
+    margin-top: 5px;
+} 
+#comments h1{
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+.comment{
+    margin-bottom: 15px;
+}
+.comment h2{
+   font-weight: 300;
+    padding-left: 70px;
+    padding-top: 5px;
+    display: block;
+}
+.comment img{
+    height: 50px;
+    border-radius: 100%;
+    background-color: grey;
+    float: left;
+    margin-left: 10px;
+}  
+.comment p{
+   width: calc(100%-30px);
+    padding: 15px;
+    padding-bottom: 0px;
+    font-weight: 400;
+    color: #222222;
+    margin-bottom: 0px;
+}    
+.comment input{
+    background: none;
+    border:none;
+    color: #1d1d1d;
+    margin-bottom: 5px;
+    margin-left: 7px;
+}      
+.comment form{
+margin-bottom: 
+}  
+/***********************************         edit.html CSS              ***********************/
+
+.editfrom{
+    width: 800px;
+    height: 570px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.editfrom h1{
+    color: #4a4a4a;
+    text-align: center;
+    height: 50px;
+    margin: 0px;
+    font-size: 45px;
+    line-height: 70px;
+}
+.editfrom h2{
+    color: #1d1d1d;
+    height: 50px;
+    margin: 0px;
+    margin-top: 20px;
+    font-weight: 300;
+    margin-left: 60px;
+    font-size: 30px;
+}
+.editfrom h2 span{
+    color: red;
+    font-size: 20px;
+}
+.editfrom p{
+    margin: 0px;
+    height: 310px;
+    padding: 20px;
+    line-height: 35px;
+    color: #212121;
+}    
+#edittitleText{
+    width: 680px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 50px;
+    padding: 5px 10px 0px 10px;
+    font-size: 25px;
+}      
+.editfrom textarea{
+    width: 680px;
+    border: none;
+    background-color: #e6e6e6;
+    height: 220px;
+    border-radius: 10px;
+    margin-left: 50px;;
+    resize: none;
+    font-size:15px;
+    padding: 10px;
+}   
+#submitedit{
+    width: 300px;
+    height: 50px;
+    margin-left: 250px;
+    margin-top: 10px;
+    background-color: #ff4646;
+    font-size: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+} 
+/***********************************         account.html CSS              ***********************/
+.accountpost{
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.accountpost h1{
+    color: white;
+    text-align: center;
+    height: 50px;
+    background-color: #767676;
+    margin: 0px;
+    font-weight: 400;
+}
+.accountpost p{
+    margin: 0px;
+    height: 310px;
+    padding: 20px;
+    overflow-y:scroll;
+    line-height: 35px;
+    color: #212121;
+}    
+.accountpost a{
+display:block;
+margin-left:auto;
+margin-right:auto;
+    text-decoration: none;
+    color: #1d1d1d;
+}
+#profPic{
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+#profPic img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: #dedede;
+    border: 3px #767676 solid;
+}
+#profPic input{
+   float: left;
+    background: none;
+    border:none;
+}
+/***********************************         responsive css            ***********************/
+@media (max-width: 940px) 
+{
+    .post{
+        width: calc(100% - 80px);
+        margin: 0px;
+        margin-bottom: 20px;
+        margin-left: 60px;
+    }
+    .upVote{
+        margin-left: 5px;
+    }
+}
+@media (max-width: 800px) 
+{
+    .profilepost{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    .profiledelete{
+        right:2.5%;
+    }
+    .postfrom{
+        width: 100%;
+        margin: 0px;
+        min-height: calc(100vh - 50px);
+    }
+    .postfrom h2{
+        margin-left: 3%;
+        margin-top: 25px;
+    }
+    .postfrom h1{
+       text-align: center;
+    }
+    #titleText{
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 0px;
+    }
+    .postfrom textarea{
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 0px;
+    }
+    #submit{
+        
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+    }
+    .editfrom{
+        width: 100%;
+        margin: 0px;
+        min-height: calc(100vh - 50px);
+    }
+    .editfrom h2{
+        margin-left: 3%;
+        margin-top: 25px;
+    }
+    .editfrom h1{
+       text-align: center;
+    }
+    #edittitleText{
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 0px;
+    }
+    .editfrom textarea{
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 0px;
+    }
+    #submitedit{
+        
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+    }
+    .singlepost{
+        width:95%;
+        margin-left: 2.5%;
+    }
+    #addcomment{
+        width:95%;
+        margin-left: 2.5%;        
+    }
+    #comments{
+        width:95%;
+        margin-left: 2.5%;        
+    }
+    .accountpost{
+        width:95%;
+        margin-left: 2.5%;           
+    }
+    
+}

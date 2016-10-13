@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <title>Blog-in</title>
+</head>
+<body>
+    <div id="menu">
+        {% if user == "" %}
+            <a class="menuLinks" href="/login">Sign In</a>
+        {% else %}
+            <a  class="menuLinks" id="usericon" href="/profile">
+                <img src="http://bucketlist.co.ke/assets/images/icons/user-icon.png" height="30px">
+            </a>
+            <a  class="menuLinks" class="menuLinks" href="/logout">Log Out</a>
+        {% endif %}
+        <a class="menuLinks" href="/post">New Post</a>
+        <a id="logo" href="/"><h1>Blog-<span>in</span></h1></a>
+    </div>
+    <h2 id="welcome">Welcome to blog-<span>in</span></h2>
+    {% for post in posts %}
+    <div class="upVote">
+        <form method="post">
+            <input type="submit" value="▲" class="upvote" name="upvote">
+            <input type="hidden" value="{{post.id}}" name="id">
+            <p>{{post.votes}}</p>
+            <input type="submit" value="▼" class="downvote" name="downvote">
+        </form>
+    </div>
+    <div class="post">
+        <div class="postheader">
+            <div class="profileimage">
+                <img src="http://cdn.wfp.org/zerohunger/profile-picture-tool/images/placeholder.svg">
+            </div>
+            <a class="profileLink" href="/account?user={{post.user}}">by {{post.user}}</a>
+        </div>
+            <a href="/posted?q={{post.id}}"><h1>{{post.title}}</h1></a>
+            <p class="content">{{post.content}}</p>
+    </div>
+    {% endfor %}
+    <a id="addNewBlog" href="/post">New Blog Post</a>
+</body>
+</html>

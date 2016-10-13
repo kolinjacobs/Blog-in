@@ -1,0 +1,72 @@
+body{
+    margin: 0px auto;
+    background-color: #e6e6e6;
+    font-family: oswald;
+}
+#menu{
+    height: 50px;
+    width: 100%;
+    background-color: #ff4646;
+    top:0px;
+}
+#menu h1{
+    color:white;
+    display: block;
+    height: 50px;
+    margin-top: 0;
+    line-height: 50px;
+    width: 100px;
+    font-weight:300;
+    margin-left: 10px;
+}
+#menu h1 span{
+    font-weight: bolder;
+}
+#menu a{
+    float: right;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 200;
+}
+#welcome{
+    text-align: center;
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 200;
+}
+#welcome span{
+    font-weight: 500;
+}
+.post{
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.blogTitle{
+    height: 50px;
+    background-color: #767676;
+}
+.post h1{
+    color: white;
+    text-align: center;
+    height: 50px;
+    background-color: #767676;
+    margin: 0px;
+    font-weight: 400;
+}
+.post p{
+    margin: 0px;
+    height: 310px;
+    padding: 20px;
+    overflow-y:scroll;
+    line-height: 35px;
+    color: #212121;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <title>Blog-in</title>
+</head>
+<body>
+    <div id="menu">
+        {% if user == "" %}
+            <a class="menuLinks" href="/login">Sign In</a>
+        {% else %}
+            <a  class="menuLinks" id="usericon" href="/profile">
+                <img src="http://bucketlist.co.ke/assets/images/icons/user-icon.png" height="30px">
+            </a>
+            <a  class="menuLinks" class="menuLinks" href="/logout">Log Out</a>
+        {% endif %}
+        <a class="menuLinks" href="/post">New Post</a>
+        <a id="logo" href="/"><h1>Blog-<span>in</span></h1></a>
+    </div>
+
+    <div class="singlepost">
+        <h1>{{post.title}}</h1>
+            <p>{{post.content}}</p>
+    </div>
+    
+    <div id="addcomment">
+        <h1>Add Comment</h1>
+        <form method="post">
+            <textarea name="commentContent"></textarea>
+            <input type="submit" name="comment" value="submit">
+        </form>
+    </div>
+    <div id="comments">
+        <h1>Comments</h1>
+        <hr>
+        {% for comment in comments %}
+        <div class="comment">
+            <img src="http://cdn.wfp.org/zerohunger/profile-picture-tool/images/placeholder.svg">
+            <h2>{{comment.username}}</h2>
+            <p>{{comment.content}}</p>
+             {% if comment.username == user %}
+                <form method="post">
+                    <input type="hidden" value="{{comment.id}}" name="id">
+                    <input type="submit" name="delete" value="delete">
+                </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

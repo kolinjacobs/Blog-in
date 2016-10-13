@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <title>Blog-in</title>
+</head>
+<body>
+
+
+    <div class="signupform">
+        <form method="post">
+            <h1>Welcome</h1>
+            <h2>Username <span>{{username_error}}</span></h2>
+            <input class="signupbar" type="text" name="username" value="">
+            <h2>Email<span>{{email_error}}</span></h2>
+            <input class="signupbar" type="email" name="email" value="">
+            <h2>Password<span>{{password_error}}</span></h2>
+            <input class="signupbar" type="password" name="password" value="">
+            <h2>Re-enter Password<span></span></h2>
+            <input class="signupbar" type="password" name="password_two" value="">
+            <input id="signupsubmit" type="submit" value="Create Account">
+        </form>
+    </div>
+    <a id="signupback" href="/">← Back to Blog-in</a>
+</body>
+</html>
