@@ -11,7 +11,7 @@ How to run:
 
 Website functionality:
 
-  Landding page(/)
+  Landing page(/)
   
     renders all blogs posted to the website in order by post time
     
