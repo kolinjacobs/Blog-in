@@ -13,21 +13,21 @@ Website functionality:
 
   Landding page(/)
   
-    renders all blog posted posted to the website ordered by post date and time
+    renders all blogs posted to the website in order by post time
     
-    allows for upvoting and downvoting 
+    upvote and downvote posts
 
   New Post(/post)
   
-    enter a title and content and post blog to the site
+    enter a title and content to create a blog post
 
   login(/login)
   
-    enter username and password and gain access to create new posts, comment, and vote 
+    enter username and password to create new posts, comment, and vote 
 
   login(/signup)
   
-    enter a username, password and email inorder to create an account 
+    enter a username, password and email to create an account 
 
   profile(/profile)
   
@@ -35,15 +35,15 @@ Website functionality:
     
     edit and delete blog posts 
  
-  user profile(/profile)
+  user profile(/user)
   
-    a list of all blogs posted by the specific user
+    a list of all blogs posted by a specific user
     
   single blog post(/posted)
   
-    a page for a specifice blog posts
+    a page for a specifice blog post
     
-    create and delte comments
+    create and delete comments
   
   edit blog post(/edit)
   
